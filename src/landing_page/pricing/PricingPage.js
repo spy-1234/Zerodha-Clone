@@ -1,10 +1,13 @@
 import React from 'react'
+import Hero from './Hero';
+import OpenAccount from '../OpenAccount'
 
 function PricingPage() {
     return ( 
-        <div className='container'>
-            <h1>PricingPage</h1>
-        </div>
+        <>
+        <Hero />
+        <OpenAccount />
+        </>
      );
 }
 
