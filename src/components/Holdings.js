@@ -4,7 +4,7 @@ import { VerticalGraph } from "./VerticalGraph";
 
 // import { holdings } from "../data/data";
 
-const Holdings = () => {
+const Holdings = () => { //component to show holdings data 
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
