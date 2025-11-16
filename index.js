@@ -10,8 +10,9 @@ const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
+const PORT = process.env.PORT || 3002;
+const url = process.env.MONGO_URI;
 
-const PORT = process.env.MONGO_URL || 3002;
 const app = express();
 
 app.use(cors());
@@ -42,6 +43,6 @@ app.post("/newOrder", async (req, res) => {
 
 app.listen(PORT, () => {
   console.log("App started!");
-  mongoose.connect(PORT);
+  mongoose.connect(url);
   console.log("DB started!");
 });
